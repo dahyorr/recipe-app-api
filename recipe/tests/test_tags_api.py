@@ -63,7 +63,7 @@ class PrivateTagsApiTests(TestCase):
         exists = Tag.objects.filter(
             user=self.user,
             name=payload['name']
-            ).exists
+            ).exists()
         self.assertTrue(exists)
 
     def test_create_invalid_tag(self):
